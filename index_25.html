@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upcoming</title>
+    <link href="style_22.css" rel ="stylesheet" type="text/css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+<div class="bgImage">
+    <div class="overlay"></div>
+    
+    <div class="content">
+        <p>The game is now open for Pre-registration on the App Store and Play Store</p>
+        <h1><span>Launching</span> Soon!</h1>
+        <div class="launch-time">
+            <div>
+                <p id="days">00</p>
+                <span>Days</span>
+            </div>
+            <div>
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div>
+                <p id="minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div>
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+        </div>
+        <!--<div class="click">
+            <button type="button">Learn More <i class='bx bxs-right-arrow'></i></button>
+            <a href="https://kiyoshi8.github.io/WeatherApp-LADS/index_3.html?fbclid=IwAR1bRe2LfiXjPSW52cXyqJpN4wt3pmm7qT25uZZa9bzoo7REmKjgrZtSNGE"></a>
+        </div>
+           <a href="https://kiyoshi8.github.io/lad1jap/index_23.html" class="button">Learn More<i class='bx bxs-right-arrow'></i></a>-->
+           <a href="https://kiyoshi8.github.io/lad2jap/index_24.html"><button type="button">Learn More <i class='bx bxs-right-arrow'></i></button></a>
+    </div>
+    <img src="lad2/182540.png" class="rocket">
+</div>
+
+<script>
+    var countDownDate = new Date("January 18, 2024 00:00:00").getTime();
+    var x = setInterval(function(){
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60) / (1000 * 60)));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerHTML = days;
+        document.getElementById("hours").innerHTML = hours;
+        document.getElementById("minutes").innerHTML = minutes;
+        document.getElementById("seconds").innerHTML = seconds;
+
+        if(distance < 0){
+            clearInterval(x);
+            document.getElementById("days").innerHTML = "00";
+            document.getElementById("hours").innerHTML = "00";
+            document.getElementById("minutes").innerHTML = "00";
+            document.getElementById("seconds").innerHTML = "00";
+
+        }
+    },1000);
+
+</script>
+</body>
+</html>
